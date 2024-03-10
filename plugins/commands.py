@@ -45,6 +45,8 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
+                   InlineKeyboardButton('😎🆒 Follow me on Instagram🆒😎', url=f'https://www.instagram.com/aye_nikhiil.07?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==')
+                ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇꜱ •', callback_data='channels')
                 ],[
