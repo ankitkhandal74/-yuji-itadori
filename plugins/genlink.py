@@ -34,10 +34,12 @@ async def gen_link_s(bot, message):
     string = 'filep_' if message.text.lower().strip() == "/plink" else 'file_'
     string += file_id
     outstr = base64.urlsafe_b64encode(string.encode("ascii")).decode().strip("=")
-    btn = InlineKeyboardButton('⚡ ᴅᴏᴡɴʟᴏᴀᴅ LINK 🔗 ⚡', url=https://t.me/{temp.U_NAME}?start={outstr}
-    reply_markup = InlineKeyboardMarkup(btn)
-    
-    await message.reply(f"Your link /n",reply_markup=reply_markup)
+    button_text = "Click Here"
+    button_url = f"https://t.me/{temp.U_NAME}?start={outstr}"
+    button = InlineKeyboardButton(button_text, url=button_url)
+    reply_markup = InlineKeyboardMarkup([[button]])
+
+    await message.reply(text="Here is your Link:", reply_markup=reply_markup)
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
