@@ -40,6 +40,7 @@ async def gen_link_s(bot, message):
     reply_markup = InlineKeyboardMarkup([[button]])
 
     await message.reply(text="Here is your Link:", reply_markup=reply_markup)
+
     
     
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
